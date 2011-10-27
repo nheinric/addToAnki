@@ -1,0 +1,2 @@
+Usage: ./add_to_anki.py '<deck path>' '<card front>' '<card back>'
+eg. ./add_to_anki.py ~/Documents/Anki/mydeck.anki '黍団子' '黍団子 【きびだんご】  (n) millet dumplings     黍団子一つください。   Give me one kibidango.'
