@@ -21,10 +21,15 @@ I added this to my Quicksilver catalog to make it easier to run.
 =head1 SYNOPSIS
 
 =over
-=item Close Anki if it's open
-=item Copy a full definition and sample sentences from WWWJDIC to the clipboard
-=item Run this script
+
+=item * Close Anki if it's open
+
+=item * Copy a full definition and sample sentences from WWWJDIC to the clipboard
+
+=item * Run this script
+
 =back
+
 =cut
 
 # Setup the environment. Must be UTF8! See add_to_anki.py
