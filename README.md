@@ -1,6 +1,6 @@
 # Setup
     1. Grab the Anki 1.2.9 source (under the Linux section) from [here](http://ankisrs.net/)
-    1. Add the paths to simplejson and libanki to your PYTHONPATH
+    1. Add the path to the Anki libs to your PYTHONPATH
     1. `export PYTHONIOENCODING=utf-8`
 
 # Usage
