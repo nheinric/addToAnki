@@ -22,6 +22,8 @@ I added this to my Quicksilver catalog to make it easier to run.
 
 =over
 
+=item * Edit the default collection/deck_name values below
+
 =item * Close Anki if it's open
 
 =item * Copy a full definition and sample sentences from WWWJDIC to the clipboard
@@ -38,10 +40,11 @@ $ENV{LANG} = "en_US.UTF-8";
 $ENV{PYTHONIOENCODING} = "utf-8";
 $ENV{PYTHONPATH} .=
     ":/Applications/Anki.app/Contents/Resources/lib/python2.7"
-    . ":$home/workspace/lib/anki-1.2.9/libanki";
+    . ":$home/workspace/lib/anki-2.0.12";
 open DEBUG, ">/tmp/blah" or die "Cant open debug file: $!";
 
-my $deck = "$home/Documents/Anki/japanese.anki";
+my $collection = "$home/Documents/Anki/User 1/collection.anki2";
+my $deck_name  = 'japanese';
 
 # On OSX, this will dump the contents of the clipboard.
 my $str = `pbpaste`;
@@ -53,8 +56,8 @@ $str =~ s/\[(Edit|Ex|L|GI?|S|A|JW|W|V)\]//g;
 $str =~ s/'//g;
 $str =~ s/\n/\\n/g;
 
-#print DEBUG "add_to_anki.py '$deck' '$key' '$str'\n";
-my $log = `$home/workspace/bin/add_to_anki.py '$deck' '$key' '$str'`;
+print DEBUG "add_to_anki-2.0.12.py '$collection' '$deck_name' '$key' '$str'\n";
+my $log = `$home/workspace/bin/add_to_anki-2.0.12.py '$collection' '$deck_name' '$key' '$str'`;
 
 print DEBUG "Result:\n$log\n";
 close DEBUG;
