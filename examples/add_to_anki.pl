@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
+
 use strict;
 use warnings;
+use utf8;
 
 =head1 DESCRIPTION
 
@@ -47,7 +49,7 @@ my $collection = "$home/Documents/Anki/User 1/collection.anki2";
 my $deck_name  = 'japanese';
 
 # On OSX, this will dump the contents of the clipboard.
-my $str = `pbpaste`;
+(my $str = `pbpaste`) =~ s/^\s+//;
 print DEBUG "Process input: $str\n";
 
 # WWWJDIC-specific cleanup.
